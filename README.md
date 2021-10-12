@@ -1,4 +1,4 @@
-# Banking API
+# Fleet Movies API
 ================================
 # MYSQL DB and Table Scripts
 ================================
