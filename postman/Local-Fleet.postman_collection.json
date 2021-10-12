@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "b2a35928-39a5-4163-b63e-debc0557fd0f",
+		"name": "Local-Fleet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddMovie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userid",
+						"value": "dk.vandhana@gmail.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"KGF\",\r\n    \"genre\": 1000,\r\n    \"releaseDate\": \"01-Dec-2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20201/addMovie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"addMovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:20201/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovieSuggestions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "userId",
+						"value": "dk.vandhana@gmail.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:20201/getMovieSuggestions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"getMovieSuggestions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUpVote",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "userId",
+						"value": "dk.vandhana@gmail.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20201/addUpVote/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"addUpVote",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDownVote",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "userId",
+						"value": "dk.vandhana@gmail.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20201/addDownVote/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"addDownVote",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddReview",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"value": "dk.vandhana@gmail.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieId\": 1000,\r\n    \"reviews\": \"This is not that good\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20201/addReview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"addReview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMovieDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"value": "dk.vandhana@gmail.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Love Story\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20201/getMovieDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"getMovieDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\": \"dk.vandhana@gmail.com\",\r\n    \"userName\": \"vandhu\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20201/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\": \"dk.vandhana@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20201/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Favourite",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userId",
+						"value": "dk.vandhana@gmail.comr",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"favouriteGenre\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:20201/setFavourite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"setFavourite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PublicMovieApi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:20201/movielist?sortby=upvote&orderby=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "20201",
+					"path": [
+						"movielist"
+					],
+					"query": [
+						{
+							"key": "sortby",
+							"value": "upvote"
+						},
+						{
+							"key": "orderby",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
